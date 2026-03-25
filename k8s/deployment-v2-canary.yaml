@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: model-v2
+  template:
+    metadata:
+      labels:
+        app: model-v2
+    spec:
+      containers:
+      - name: model
+        image: your-dockerhub/ml-api:latest
+        env:
+        - name: MODEL_NAME
+          value: "models/saved/model_v2.pkl"
+        ports:
+        - containerPort: 8000
