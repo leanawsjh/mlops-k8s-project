@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+app/app.py
+app/drift.py
+app/model_loader.py
+mlops_k8s_project.egg-info/PKG-INFO
+mlops_k8s_project.egg-info/SOURCES.txt
+mlops_k8s_project.egg-info/dependency_links.txt
+mlops_k8s_project.egg-info/requires.txt
+mlops_k8s_project.egg-info/top_level.txt
+models/generate_drift.py
+models/train.py
+models/tune.py

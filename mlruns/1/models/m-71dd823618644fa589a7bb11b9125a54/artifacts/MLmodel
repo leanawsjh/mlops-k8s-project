@@ -1,0 +1,23 @@
+artifact_path: /Users/javedhassansabu/projects/mlops-k8s-project/mlruns/1/models/m-71dd823618644fa589a7bb11b9125a54/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.10.1
+model_id: m-71dd823618644fa589a7bb11b9125a54
+model_size_bytes: 11042228
+model_uuid: m-71dd823618644fa589a7bb11b9125a54
+prompts: null
+run_id: b1a3aed92eca44f6a7bddbd3de0a1706
+utc_time_created: '2026-03-27 17:13:26.119144'

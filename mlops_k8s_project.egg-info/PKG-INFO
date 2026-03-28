@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: mlops-k8s-project
+Version: 0.1.0
+Summary: MLOps project with MLflow, FastAPI, and Kubernetes
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: scikit-learn>=1.4.0
+Requires-Dist: joblib>=1.3.0
+Requires-Dist: mlflow>=2.12.0
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn>=0.29.0
+Requires-Dist: evidently>=0.4.20
+Requires-Dist: hyperopt>=0.2.7
+Requires-Dist: ruff>=0.4.0
+
+# mlops-k8s-project
+This is a test repo for AWS - k8
+
+- use setup.sh file to set up kubernetes clusters.
+- trouble shoot: if permession is denied --> chmod +x setup.sh
+- run ./setup.sh
+
+- to clean up the cluster --> chmod +x cleanup.sh
+- run ./cleanup.sh
+
+# How to run step by step
+## 1. Train Models
+- python models/train.py
+- python models/generate_drift.py
+
+## 2. Build & push Docker
+- docker build -t your-dockerhub/ml-api:latest -f docker/Dockerfile .
+- docker push your-dockerhub/ml-api:latest
+
+## Deploy on kubernetes
+- kubectl apply -f k8s/deployment-v1.yaml
+- kubectl apply -f k8s/service.yaml
